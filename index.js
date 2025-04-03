@@ -1,4 +1,3 @@
-// ==== index.js ====
 import express from "express";
 import { createServer } from "node:http";
 import { Server } from "socket.io";
@@ -28,6 +27,10 @@ io.on("connection", (socket) => {
       senderId: socket.id,
     };
     io.emit("chat message", msgData);
+  });
+
+  socket.on("typing", (username) => {
+    socket.broadcast.emit("typing", username);
   });
 
   socket.on("disconnect", () => {

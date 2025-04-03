@@ -80,4 +80,11 @@
   .chat-button:hover {
     background-color: #0056b3;
   }
+  .typing-indicator {
+    margin: 6px 0 12px 10px;
+    font-style: italic;
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
   

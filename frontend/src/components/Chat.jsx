@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { io } from "socket.io-client";
 import "../stylesheets/Chat.css";
 
@@ -8,14 +8,38 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [user, setUser] = useState("");
+  const [typingUser, setTypingUser] = useState("");
+
+  const typingTimeoutRef = useRef(null);
 
   useEffect(() => {
     socket.on("chat message", (data) => {
       console.log("Message received:", data);
       setMessages((prev) => [...prev, data]);
     });
-    return () => socket.off("chat message");
-  }, []);
+
+    socket.on("typing", (username) => {
+      if (username !== user) {
+        setTypingUser(username);
+        if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
+        typingTimeoutRef.current = setTimeout(() => {
+          setTypingUser("");
+        }, 3000);
+      }
+    });
+
+    return () => {
+      socket.off("chat message");
+      socket.off("typing");
+      if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
+    };
+  }, [user]);
+
+  useEffect(() => {
+    if (user && input.trim()) {
+      socket.emit("typing", user);
+    }
+  }, [input]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,6 +76,11 @@ const Chat = () => {
         </ul>
       </div>
 
+      {/* Creative  Addition- typing */}
+      {typingUser && (
+        <div className="typing-indicator">{typingUser} is typing...</div>
+      )}
+
       <form onSubmit={handleSubmit} className="chat-form">
         <input
           type="text"
@@ -67,4 +96,5 @@ const Chat = () => {
 };
 
 export default Chat;
+
 
