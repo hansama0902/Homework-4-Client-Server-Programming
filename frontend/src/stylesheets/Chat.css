@@ -9,7 +9,7 @@
   .chat-title {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: black; /* 按你的要求：标题为黑色 */
+    color: black;
   }
   
   .chat-input {
