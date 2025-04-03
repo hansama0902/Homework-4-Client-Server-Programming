@@ -74,7 +74,7 @@ The typing message disappears after a few seconds of inactivity. This feature ad
 
 ## Usage of GenAI
 
-Used ChatGPT (GPT-4) to assist with the following client-server programming and Socket.IO integration tasks:
+Used ChatGPT (GPT-4o) to assist with the following client-server programming and Socket.IO integration tasks:
 
 Prompt: How can I include sender name and message timestamp in a Socket.IO chat app and display them clearly in React?
 
