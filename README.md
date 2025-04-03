@@ -86,7 +86,7 @@ Prompt: How can I avoid CORS entirely by serving the React build from the same E
 
 ## Video Demonstration
 
-(Video)[https://youtu.be/6fc9H1M3TRQ]
+[Video](https://youtu.be/6fc9H1M3TRQ)
 
 ---
 
