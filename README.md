@@ -68,16 +68,25 @@ The typing message disappears after a few seconds of inactivity. This feature ad
 
 - Frontend: React 19, Vite, socket.io-client
 - Backend: Express, socket.io
-- Scripts:
-  - `npm start` – starts the backend server and serves the frontend
-  - `npm run frontend` – runs the Vite-powered React frontend (dev only)
-  - `npm run build` – builds the frontend for production
 
 ---
 
+## Usage of GenAI
+
+Used ChatGPT (GPT-4) to assist with the following client-server programming and Socket.IO integration tasks:
+
+Prompt: How can I include sender name and message timestamp in a Socket.IO chat app and display them clearly in React?
+
+Prompt: What is CORS and why does it cause issues when connecting React frontend to a Node.js backend running on a different port?
+
+Prompt: How can I avoid CORS entirely by serving the React build from the same Express server that runs my Socket.IO backend?
+
+---
+
+
 ## Video Demonstration
 
-[Add your video link here]
+Video
 
 ---
 
