@@ -1,6 +1,7 @@
 # Real-Time Chat Application (Socket.IO + React + Vite)
 
-## Homework 4: Client/Server Programming  
+## Homework 4: Client/Server Programming
+
 CS 5010 - Program Design Paradigms  
 Instructor: John Alexis Guerra Gómez  
 Author: Shuhan Dong
@@ -82,7 +83,6 @@ Prompt: What is CORS and why does it cause issues when connecting React frontend
 Prompt: How can I avoid CORS entirely by serving the React build from the same Express server that runs my Socket.IO backend?
 
 ---
-
 
 ## Video Demonstration
 

@@ -89,12 +89,12 @@ const Chat = () => {
           placeholder="Type your message here..."
           className="chat-input"
         />
-        <button type="submit" className="chat-button">Send</button>
+        <button type="submit" className="chat-button">
+          Send
+        </button>
       </form>
     </div>
   );
 };
 
 export default Chat;
-
-
