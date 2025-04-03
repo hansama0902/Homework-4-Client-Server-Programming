@@ -18,8 +18,8 @@ This project is a real-time chat application that reimplements the Socket.IO tut
 1. Clone the Repository
 
 ```
-git clone https://github.com/your-username/SocketIO-Chat-React-Vite.git
-cd SocketIO-Chat-React-Vite
+git clone https://github.com/hansama0902/Homework-4-Client-Server-Programming.git
+cd Homework-4-Client-Server-Programming
 ```
 
 2. Install Dependencies
